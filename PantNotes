@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "What is the caller's name? "
+read input_variable
+NAME=$input_variable
+#
+echo "What is the account name? "
+read input_variable
+ACCOUNT=$input_variable
+#
+touch notes_$ACCOUNT
+#
+echo "What is the issue? "
+read input_variable
+ISSUE=$input_variable
+#
+echo "How many affected users? "
+read input_variable
+AFFUSR=$input_variable
+#
+echo ------------------------------ >> notes_$ACCOUNT
+echo Name: $NAME >> notes_$ACCOUNT
+echo Account: $ACCOUNT >> notes_$ACCOUNT
+echo Issue: $ISSUE >> notes_$ACCOUNT
+echo Number of affected users: $AFFUSR >> notes_$ACCOUNT
+echo ------------------------------ >> notes_$ACCOUNT
+vim notes_$ACCOUNT
